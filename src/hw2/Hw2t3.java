@@ -26,5 +26,7 @@ public class Hw2t3 {
         String toLowerCaseA = randomText.toLowerCase();
         String[] generalA = toLowerCaseA.split("a");
         System.out.println("General amount of a and A: " + generalA.length);
+
+        /* Показывает кол-во на 1 больше, чем есть на самом деле... не понимаю, в чем проблема*/
     }
 }
