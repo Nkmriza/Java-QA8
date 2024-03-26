@@ -25,7 +25,6 @@ public class Hw2t3 {
 
         String toLowerCaseA = randomText.toLowerCase();
         String[] generalA = toLowerCaseA.split("a");
-        System.out.println(randomText.toLowerCase());
         System.out.println("General amount of a and A: " + generalA.length);
     }
 }
