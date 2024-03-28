@@ -21,12 +21,12 @@ public class HW3t1 {
         System.out.println("string 1 = " + string1);
         System.out.println("string 2 = " + string2);
         System.out.println("string 3 = " + string3);
-        System.out.println("string 4 = " + string4);
-        System.out.println(scannerForLine.next().trim() + "\s" + scannerForLine.next().trim());
+        /*System.out.println("string 4 = " + string4);*/
+        System.out.println("string 4 = " + string4 + "\s" + scannerForLine.next().trim() + "\s" + scannerForLine.next().trim());
         scannerForLine.close();
 
         System.out.println("============");
-        /* еще такой вариант пришел в голову*/
+        /* еще такой вариант пришел в голову :) */
         System.out.println("string 4 = " + string4 + "\s" + "ще потрібно?");
 
         /* Я вообще правильно задание поняла?*/

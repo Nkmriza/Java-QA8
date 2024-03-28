@@ -26,5 +26,10 @@ public class HW3t2 {
             System.out.println("Не можна побудувати трикутник з цих сторін");
         }
         scannerForTriangle.close();
+
+        System.out.println("============");
+        /* Ну или так*/
+        String messageToPrint = a + b > c ? "Можна побудувати трикутник" : "Не можна побудувати трикутник з цих сторін";
+        System.out.println(messageToPrint);
     }
 }
