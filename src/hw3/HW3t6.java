@@ -22,7 +22,7 @@ public class HW3t6 {
         switch (prog.toLowerCase()) {
             case "intellij idea":
                 System.out.println("IntelliJ IDEA");
-                switch (os.toLowerCase()){
+                switch (os.toLowerCase()) {
                     case "linux":
                         System.out.println("https://www.jetbrains.com/idea/download/?section=linux");
                         break;
@@ -31,11 +31,13 @@ public class HW3t6 {
                         break;
                     case "windows":
                         System.out.println("https://www.jetbrains.com/idea/download/?section=windows");
+                    default:
+                        System.out.println("Немає зазначеної ОС");
                 }
                 break;
             case ("git"):
                 System.out.println("Git");
-                switch (os.toLowerCase()){
+                switch (os.toLowerCase()) {
                     case "linux":
                         System.out.println("https://git-scm.com/download/linux");
                         break;
@@ -44,11 +46,13 @@ public class HW3t6 {
                         break;
                     case "windows":
                         System.out.println("https://git-scm.com/download/win");
+                    default:
+                        System.out.println("Немає зазначеної ОС");
                 }
                 break;
             case ("java"):
                 System.out.println("Java");
-                switch (os.toLowerCase()){
+                switch (os.toLowerCase()) {
                     case "linux":
                         System.out.println("https://www.oracle.com/java/technologies/downloads/");
                         break;
@@ -57,16 +61,19 @@ public class HW3t6 {
                         break;
                     case "windows":
                         System.out.println("https://www.oracle.com/java/technologies/downloads/");
-                break;}
+                    default:
+                        System.out.println("Немає зазначеної ОС");
+                }
+                break;
 
             default:
                 System.out.println("Такої програми не існує");
                 break;
+
+
         }
-
-
-
-
-
+        scanner.close();
     }
+
 }
+

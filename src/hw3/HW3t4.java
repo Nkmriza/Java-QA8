@@ -14,6 +14,8 @@ public class HW3t4 {
     public static void main(String[] args) {
         Scanner dayByNumber = new Scanner(System.in);
 
+        System.out.println("Введіть число від 1 до 7");
+
         String mon = "Понеділок";
         String tue = "Вівторок";
         String wen = "Середа";
@@ -23,6 +25,7 @@ public class HW3t4 {
         String sun = "Неділя";
         String exc = "Краще б сьогодні була п'ятниця";
         int number = dayByNumber.nextInt();
+
 
         if (number == 1) {
             System.out.println(mon);
@@ -42,7 +45,6 @@ public class HW3t4 {
             System.out.println(exc);
         }
         dayByNumber.close();
-
 
     }
 }

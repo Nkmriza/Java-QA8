@@ -12,6 +12,7 @@ public class HW3t1 {
     public static void main(String[] args) {
         Scanner scannerForLine = new Scanner(System.in);
         /* String textFromScanner = scannerForLine.next();*/
+        System.out.println("Введіть речення:");
         String string1 = scannerForLine.next();
         String string2 = scannerForLine.next();
         String string3 = scannerForLine.next();
@@ -25,9 +26,8 @@ public class HW3t1 {
         System.out.println("string 4 = " + string4 + "\s" + scannerForLine.next().trim() + "\s" + scannerForLine.next().trim());
         scannerForLine.close();
 
-        System.out.println("============");
-        /* еще такой вариант пришел в голову :) */
-        System.out.println("string 4 = " + string4 + "\s" + "ще потрібно?");
+        /* еще такой вариант пришел в голову :)
+        System.out.println("string 4 = " + string4 + "\s" + "ще потрібно?");*/
 
         /* Я вообще правильно задание поняла?*/
 
