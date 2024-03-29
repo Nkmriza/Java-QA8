@@ -33,12 +33,31 @@ public class HW3t6 {
                         System.out.println("https://www.jetbrains.com/idea/download/?section=windows");
                 }
                 break;
-            case ("Git"):
+            case ("git"):
                 System.out.println("Git");
+                switch (os.toLowerCase()){
+                    case "linux":
+                        System.out.println("https://git-scm.com/download/linux");
+                        break;
+                    case "macos":
+                        System.out.println("https://git-scm.com/download/mac");
+                        break;
+                    case "windows":
+                        System.out.println("https://git-scm.com/download/win");
+                }
                 break;
-            case ("Java"):
+            case ("java"):
                 System.out.println("Java");
-                break;
+                switch (os.toLowerCase()){
+                    case "linux":
+                        System.out.println("https://www.oracle.com/java/technologies/downloads/");
+                        break;
+                    case "macos":
+                        System.out.println("https://www.oracle.com/java/technologies/downloads/");
+                        break;
+                    case "windows":
+                        System.out.println("https://www.oracle.com/java/technologies/downloads/");
+                break;}
 
             default:
                 System.out.println("Такої програми не існує");
