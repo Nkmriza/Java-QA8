@@ -18,18 +18,18 @@ public class HW3t6 {
         String prog = scanner.nextLine();
         System.out.println("Якою ОС ви користуєтесь?");
         String os = scanner.nextLine();
-        String intelIde = "IntelliJ IDEA";
+        /*String intelIde = "IntelliJ IDEA";*/
         switch (prog.toLowerCase()) {
-            case "IntelliJ IDEA":
+            case "intellij idea":
                 System.out.println("IntelliJ IDEA");
                 switch (os.toLowerCase()){
-                    case "Linux":
+                    case "linux":
                         System.out.println("https://www.jetbrains.com/idea/download/?section=linux");
                         break;
-                    case "MacOS":
+                    case "macos":
                         System.out.println("https://www.jetbrains.com/idea/download/?section=mac");
                         break;
-                    case "Windows":
+                    case "windows":
                         System.out.println("https://www.jetbrains.com/idea/download/?section=windows");
                 }
                 break;
@@ -40,9 +40,9 @@ public class HW3t6 {
                 System.out.println("Java");
                 break;
 
-            /*default:
+            default:
                 System.out.println("Такої програми не існує");
-                break;*/
+                break;
         }
 
 
