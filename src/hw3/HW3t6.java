@@ -16,22 +16,37 @@ public class HW3t6 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Яка програма вас цікавить?");
         String prog = scanner.nextLine();
-        switch (prog.toLowerCase()){
-            case ("IntelliJ IDEA"):System.out.println("IntelliJ IDEA");
-            break;
-            case ("Git"):System.out.println("Git");
-            break;
-            case ("Java"):System.out.println("Java");
-            break;
+        System.out.println("Якою ОС ви користуєтесь?");
+        String os = scanner.nextLine();
+        String intelIde = "IntelliJ IDEA";
+        switch (prog.toLowerCase()) {
+            case "IntelliJ IDEA":
+                System.out.println("IntelliJ IDEA");
+                switch (os.toLowerCase()){
+                    case "Linux":
+                        System.out.println("https://www.jetbrains.com/idea/download/?section=linux");
+                        break;
+                    case "MacOS":
+                        System.out.println("https://www.jetbrains.com/idea/download/?section=mac");
+                        break;
+                    case "Windows":
+                        System.out.println("https://www.jetbrains.com/idea/download/?section=windows");
+                }
+                break;
+            case ("Git"):
+                System.out.println("Git");
+                break;
+            case ("Java"):
+                System.out.println("Java");
+                break;
 
-        default:
-            System.out.println("Такої програми не існує");
-        break;}
+            /*default:
+                System.out.println("Такої програми не існує");
+                break;*/
+        }
 
 
 
-      /*  System.out.println("Якою ОС ви користуєтесь?");
-         String oS = scanner.nextLine();*/
 
 
     }
