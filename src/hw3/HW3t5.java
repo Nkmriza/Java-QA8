@@ -24,8 +24,8 @@ public class HW3t5 {
         int result;
         String symbol = scanner.next();
 
-        result = symbol.equals(char1) ? (a + b) : symbol.equals(char2)? (a - b) : symbol.equals(char3) ?
-                (a % b) : symbol.equals(char4) ? (a * b): symbol.equals(char5) ? (a / b) : c;
+        result = symbol.equals(char1) ? (a + b) : symbol.equals(char2) ? (a - b) : symbol.equals(char3) ?
+                (a % b) : symbol.equals(char4) ? (a * b) : symbol.equals(char5) ? (a / b) : c;
 
         System.out.println(result);
         scanner.close();
