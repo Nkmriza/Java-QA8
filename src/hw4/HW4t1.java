@@ -25,17 +25,8 @@ public class HW4t1 {
             words.append(word).append(" ");
         }
 
-        System.out.println("цілісне речення: ");
-        System.out.println(words.toString().trim());
-
-
-
-        /*do {
-            System.out.println(words.trim());
-        }
-        while{
-            System.out.println("STOP");
-        }*/
+        System.out.println("цілісне речення: " + words.toString().trim());
+        /*System.out.println(words.toString().trim());*/
 
 
     }
