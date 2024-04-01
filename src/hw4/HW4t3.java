@@ -15,29 +15,29 @@ public class HW4t3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть вагу, яка може зберігатіся на складі в кг: ");
-        int weight = scanner.nextInt();
-        String info = "Максимальна вага, яка може зберігатися на складі: ";
+        int initialWeight = scanner.nextInt();
+        String info = "Ви можете додати ще: ";
 
-        while (weight >= 5) {
+        while (initialWeight >= 0) {
             System.out.println("Яку вагу ви збираєтесь здати на склад?");
-            int i = scanner.nextInt();
-            if (i < 5) {
+            int addedWeight = scanner.nextInt();
+            if (addedWeight < 5) {
                 System.out.println("Склад приймає вагу від 5 кг");
                 continue;
             }
-            if (weight < i) {
-                System.out.println("Недостатньо місця." + info + weight);
-                break;
+            if (initialWeight < addedWeight) {
+                System.out.println("Недостатньо місця." + info + initialWeight + "кг.");
+                continue;
             }
-            /*int weight2 = weight - i;*/
-            weight -= i;
-            System.out.println("Залишилось місця на вагу: " + weight + " кг.");
+            /*int weight2 = weight - i; - этот вариант не работает:(*/
+            initialWeight -= addedWeight;
+            System.out.println("Залишилось місця на складі: " + initialWeight + " кг.");
 
-            if (weight == 0) {
+            if (initialWeight == 0) {
                 break;
             }
         }
-        System.out.println("Максимальна вага. На складі закінчилось місце");
+        System.out.println("На складі закінчилось місце");
 
     }
 }
