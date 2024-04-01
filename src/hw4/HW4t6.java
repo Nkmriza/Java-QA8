@@ -4,7 +4,9 @@ public class HW4t6 {
     /*Заповнити масив на 45 елементів довільними числами від -50 до +50.
     Знайти мінімальний елемент та вивести його на консоль. Знайти максимальний
     елемент та вивести його на консоль.*/
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        int[] number = new int[45];
+
 
     }
 

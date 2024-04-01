@@ -1,5 +1,7 @@
 package hw4;
 
+import java.util.Scanner;
+
 public class HW4t3 {
     /*Написати програму, умовно для складу прийому металу.
      Припустимо, що склад може зберігати певну вагу металу.
@@ -10,7 +12,32 @@ public class HW4t3 {
      то програма не дає йому це зробити і повідомляє користувача про неможливість цієї операції.
      Якщо користувач здає метал вагою менше 5, програма теж попереджає про неможливість
      приймання такої малої ваги. Програма завершується, коли місце на складі закінчилось.*/
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть вагу, яка може зберігатіся на складі в кг: ");
+        int weight = scanner.nextInt();
+        String info = "Максимальна вага, яка може зберігатися на складі: ";
+
+        while (weight >= 5) {
+            System.out.println("Яку вагу ви збираєтесь здати на склад?");
+            int i = scanner.nextInt();
+            if (i < 5) {
+                System.out.println("Склад приймає вагу від 5 кг");
+                continue;
+            }
+            if (weight < i) {
+                System.out.println("Недостатньо місця." + info + weight);
+                break;
+            }
+            /*int weight2 = weight - i;*/
+            weight -= i;
+            System.out.println("Залишилось місця на вагу: " + weight + " кг.");
+
+            if (weight == 0) {
+                break;
+            }
+        }
+        System.out.println("Максимальна вага. На складі закінчилось місце");
 
     }
 }

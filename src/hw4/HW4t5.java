@@ -5,6 +5,7 @@ public class HW4t5 {
      Користувач вводить із клавіатури число. Програма показує чи є таке число
      у створеному раніше масиві.*/
     public static void main(String[] args){
+        int[] number = new int[10];
 
     }
 }
