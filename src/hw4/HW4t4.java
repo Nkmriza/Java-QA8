@@ -1,5 +1,7 @@
 package hw4;
 
+import java.util.Scanner;
+
 public class HW4t4 {
     /*Перший складатиметься з наступних імен: “Петя”, “Маша”, “Олена”, “Федя”,
      “Саша”, “Антон”, “Гліб”. Другий міститиме такі значення типу int: 10, 12,
@@ -10,13 +12,18 @@ public class HW4t4 {
      Приклад2. після введення 1,2,3: На екрані має вивестися наступне повідомлення:
      "Маша йтиме в тренажерний зал о 14:00"*/
     public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
         String[] arrayName= {"Петя", "Маша", "Олена", "Федя","Саша","Антон","Гліб"};
-
-        int[] number = new int[20];
-
-        String [] arrayPlace = {"школа", "магазин", "церква",
-     "тренажерний зал", "кіно", "поліклініка"};
-
+        int[] number = {10, 12, 14, 16, 18,20};
+        String [] arrayPlace = {"школу", "магазин", "церкву",
+     "тренажерний зал", "кіно", "поліклініку"};
+        System.out.println("Введіть три цифри: ");
+        String sentence = scanner.next();
+        int name = scanner.nextInt() - 1;
+       /* System.out.println(arrayName.length);
+        System.out.println(number.length);
+        System.out.println(arrayPlace.length);
+        System.out.println(arrayName[0].length() + "буде йти в " + arrayPlace[0].length() + "о " + number[0] );*/
 
 
 
