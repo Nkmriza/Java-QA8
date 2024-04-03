@@ -19,7 +19,7 @@ public class HW4t1 {
             String word = scanner.next();
             System.out.println(word);
 
-            if (word.equalsIgnoreCase (stop)) {
+            if (word.equalsIgnoreCase(stop)) {
                 break;
             }
             words.append(word).append(" ");

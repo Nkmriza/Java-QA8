@@ -36,12 +36,13 @@ public class HW4t6 {
         System.out.println(maxNumber);
 
         System.out.println("============");
+        /* в гугле пишут, что можно еще таким способом. решила попробовать*/
         System.out.println(" ");
         int minNumber2 = Arrays.stream(numbersAmount).min().getAsInt();
         int maxNumber2 = Arrays.stream(numbersAmount).max().getAsInt();
         System.out.println(minNumber2);
         System.out.println(maxNumber2);
-        /* в гугле пишут, что можно еще таким способом*/
+
 
     }
 

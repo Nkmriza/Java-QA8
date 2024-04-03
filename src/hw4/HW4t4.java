@@ -1,5 +1,6 @@
 package hw4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HW4t4 {
@@ -17,24 +18,24 @@ public class HW4t4 {
         int[] number = {10, 12, 14, 16, 18, 20};
         String[] arrayPlace = {"школу", "магазин", "церкву",
                 "тренажерний зал", "кіно", "поліклініку"};
-        System.out.println("Введіть три цифри: ");
-        String sentence = scanner.next();
-        /*String name1 = arrayName[1];
-        String name2 = arrayName[2];
-        String name3 = arrayName[3];
-        String name4 = arrayName[4];
-        String name5 = arrayName[5];
-        String name6 = arrayName[6];
-        String name7 = arrayName[7];
-        System.out.println(name1);*/
+        String expectedString = "{NAME} піде в {PLACE} о {TIME}:00";
+        System.out.println("Введіть три числа (де перше від 0 до 6, два інших від 0 до 5)");
+        int index = scanner.nextInt();
+        int index2 = scanner.nextInt();
+        int index3 = scanner.nextInt();
+        while (index < 0 || index >= 6) {
+            System.out.println("Перше значення від 0 до 6");
+            index = scanner.nextInt();
+        }
+        while (index2 < 0 || index2 >= 5 || index3 < 0 || index3 >= 5) {
+            System.out.println("Друге та третє значення від 0 до 5");
+            index2 = scanner.nextInt();
+            index3 = scanner.nextInt();
+        }
 
-        int name = scanner.nextInt() - 1;
-        System.out.println(name);
-       /* System.out.println(arrayName.length);
-        System.out.println(number.length);
-        System.out.println(arrayPlace.length);
-        System.out.println(arrayName[0].length() + "буде йти в " + arrayPlace[0].length() + "о " + number[0] );*/
-
+        System.out.println(expectedString.replace("{NAME}", arrayName[index]).
+                replace("{PLACE}", arrayPlace[index2]).
+                replace("{TIME}", Integer.toString(number[index3])));
 
     }
 }
