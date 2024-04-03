@@ -21,15 +21,15 @@ public class HW4t5 {
         System.out.println(" ");
         System.out.println("Введіть число:");
         int certainNumber = scanner.nextInt();
-        boolean answer = false;
+        boolean answerForChosenNumber  = false;
 
         for (int i = 0; i < numbersInArray.length; i++) {
             if (numbersInArray[i] == certainNumber) {
-                answer = true;
+                answerForChosenNumber = true;
             }
         }
 
-        if (answer) {
+        if (answerForChosenNumber) {
             System.out.println("Число " + certainNumber + " " + "є у даному масиві");
         } else {
             System.out.println("Таке число відсутнє у даному масиві");
