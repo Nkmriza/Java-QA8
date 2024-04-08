@@ -25,7 +25,7 @@ public class HW6t1 {
             System.out.println(Arrays.toString(twoDimensionalArray[i]));
         }
         System.out.println();
-        System.out.println("Масив з максимальних значень кожного окремого масиву:");
+        System.out.println("Одновимірний масив з максимальних значень кожного окремого масиву:");
         int[] newArray = new int[valueOfFistIndex];
         for (int i = 0; i < valueOfFistIndex; i++) {
             int maxNumber = twoDimensionalArray[i][0];
