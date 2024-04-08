@@ -30,19 +30,15 @@ public class HW6t1 {
             System.out.println();
         }
         System.out.println("Максимальне значення з кожного масиву:");
-        int maxNumber = twoDimensionalArray[0][0];
         for (int i = 0; i < valueOfFistIndex; i++) {
-            for (int j = 0; j < valueOfSecondIndex; j++)
-            if (twoDimensionalArray[i][j] > maxNumber) {
-                maxNumber = twoDimensionalArray[i][j];
-               int maxNumber2 = twoDimensionalArray[0][0];
-            if (maxNumber2 < maxNumber && valueOfFistIndex > maxNumber && valueOfSecondIndex >maxNumber2) {
-                maxNumber2 = maxNumber;
-            }
-                System.out.print(maxNumber2 + " ");
-                System.out.println(maxNumber);
-            }
+            int maxNumber = twoDimensionalArray[i][0];
+            for (int j = 1; j < valueOfSecondIndex; j++) {
+                if (twoDimensionalArray[i][j] > maxNumber) {
+                    maxNumber = twoDimensionalArray[i][j];
+                }
 
+            }
+            System.out.print(maxNumber + " ");
         }
     }
 }
