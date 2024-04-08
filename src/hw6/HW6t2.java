@@ -1,5 +1,6 @@
 package hw6;
 
+import java.security.cert.TrustAnchor;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -22,23 +23,19 @@ public class HW6t2 {
 • Уражену ціль відзначити як x.
 • Завдання повинно бути виконане за допомогою масивів (НЕ використовуйте
  інтерфейси List, Set, Map).
-Приклад виведення в консоль.
-[0, 1, 2, 3, 4, 5]
-[1, -, *, -, -, -]
-[2, -, -, -, -, -]
-[3, -, *, -, -, -]
-[4, -, -, *, -, -]
-[5, -, *, -, -, *]
 */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.println("All Set. Get ready to rumble!");
-        System.out.println();
-        System.out.println("Choose the line for shooting (1-5):");
-        String randomChoice = scanner.next().trim();
-        char[][] playingBoard = new char[6][6];
+        char[][] playingBoard = new char[5][5];
+        while (true) {
+            System.out.println("Choose the line for shooting (1-5):");
+            int line = scanner.nextInt() - 1;
+            System.out.println("Choose the column for shooting (1-5):");
+            int column = scanner.nextInt() - 1;
 
+        }
 
     }
 }
@@ -51,4 +48,11 @@ public class HW6t2 {
                 System.out.print(board[i][a] + " ");
             }
             System.out.println(" ");
-        }*/
+        }
+[0, 1, 2, 3, 4, 5]
+[1, -, *, -, -, -]
+[2, -, -, -, -, -]
+[3, -, *, -, -, -]
+[4, -, -, *, -, -]
+[5, -, *, -, -, *]
+        */
