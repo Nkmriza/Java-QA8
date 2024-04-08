@@ -21,7 +21,6 @@ Your number is too small. Please, try again.. Якщо введене число
 
 
     public static void main(String[] args) {
-        /*java.util.random.RandomGenerator;*/
         System.out.println("LET THE GAME BEGIN!");
         Scanner scanner = new Scanner(System.in);
         Random randomNumbers = new Random();
@@ -56,13 +55,10 @@ Your number is too small. Please, try again.. Якщо введене число
                     System.out.println("Your number is too small. Please, try again");
                 } else if (playersNumberIsBigger) {
                     System.out.println("Your number is too big.  Please, try again");
-                }
-
-            }
-            for (int i = 0; i < numbers.length; i++) {
-                if (numbers[i] == yourNumber) {
+                } else {
                     System.out.println(congrats.replace("{name}", name));
                 }
+                break;
             }
         }
     }
