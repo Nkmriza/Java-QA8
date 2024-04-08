@@ -22,12 +22,11 @@ public class HW6t1 {
             for (int j = 0; j < valueOfSecondIndex; j++) {
                 twoDimensionalArray[i][j] = random.nextInt(1000);
             }
-
             System.out.println(Arrays.toString(twoDimensionalArray[i]));
         }
         System.out.println();
         System.out.println("Масив з максимальних значень кожного окремого масиву:");
-        int [] newArray = new int[valueOfFistIndex];
+        int[] newArray = new int[valueOfFistIndex];
         for (int i = 0; i < valueOfFistIndex; i++) {
             int maxNumber = twoDimensionalArray[i][0];
             for (int j = 1; j < valueOfSecondIndex; j++) {
@@ -35,7 +34,7 @@ public class HW6t1 {
                     maxNumber = twoDimensionalArray[i][j];
                 }
             }
-           newArray [i] = maxNumber;
+            newArray[i] = maxNumber;
         }
         System.out.println(Arrays.toString(newArray));
         System.out.println();
