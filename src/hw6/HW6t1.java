@@ -17,28 +17,27 @@ public class HW6t1 {
         int valueOfFistIndex = scanner.nextInt();
         int valueOfSecondIndex = scanner.nextInt();
         int[][] twoDimensionalArray = new int[valueOfFistIndex][valueOfSecondIndex];
-        for (int i = 0; i < valueOfFistIndex; i++) {
-            for (int j = 0; j < valueOfSecondIndex; j++) {
-                twoDimensionalArray[i][j] = random.nextInt(1001);
-            }
-        }
         System.out.println("Наш двовимірний масив з випадкових чисел:");
         for (int i = 0; i < valueOfFistIndex; i++) {
             for (int j = 0; j < valueOfSecondIndex; j++) {
-                System.out.print(twoDimensionalArray[i][j] + " ");
+                twoDimensionalArray[i][j] = random.nextInt(1000);
             }
-            System.out.println();
+
+            System.out.println(Arrays.toString(twoDimensionalArray[i]));
         }
-        System.out.println("Максимальне значення з кожного масиву:");
+        System.out.println();
+        System.out.println("Масив з максимальних значень кожного окремого масиву:");
+        int [] newArray = new int[valueOfFistIndex];
         for (int i = 0; i < valueOfFistIndex; i++) {
             int maxNumber = twoDimensionalArray[i][0];
             for (int j = 1; j < valueOfSecondIndex; j++) {
                 if (twoDimensionalArray[i][j] > maxNumber) {
                     maxNumber = twoDimensionalArray[i][j];
                 }
-
             }
-            System.out.print(maxNumber + " ");
+           newArray [i] = maxNumber;
         }
+        System.out.println(Arrays.toString(newArray));
+        System.out.println();
     }
 }
