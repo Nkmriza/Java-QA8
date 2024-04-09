@@ -77,6 +77,7 @@ public class HW6t2 {
                     for (int j = 0; j < playingBoard.length; j++) {
                         System.out.print(playingBoard[i][j] + " ");
                     }
+
                     System.out.println();
                 }
             }
