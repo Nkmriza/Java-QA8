@@ -38,11 +38,11 @@ public class HW6t2 {
             System.out.println();
         }
 
-        while (true){
+        while (true) {
             System.out.println("Choose the line for shooting (1-5):");
-        int line = scanner.nextInt();
-        System.out.println("Choose the column for shooting (1-5):");
-        int column = scanner.nextInt();
+            int line = scanner.nextInt();
+            System.out.println("Choose the column for shooting (1-5):");
+            int column = scanner.nextInt();
             if (line < 1 || line > 5 || column < 1 || column > 5) {
                 System.out.println("Invalid line or column, try again!");
             }
@@ -50,46 +50,18 @@ public class HW6t2 {
             int neededColumn = random.nextInt();
 
 
-    }
-       /*
-
-            if (column == line1 && column == column2) {
-                playingBoard[line][column] = String.valueOf("x");
-
-
-                for (int i = 0; i < 5; i++) {
-                    for (int j = 0; j < 5; j++) {
-                        System.out.print(playingBoard[i][j] + " ");
-                    }
-                    System.out.println();
-                }
-                System.out.println("You have won!");
-                break;
-            } else {
-                playingBoard[line][column] = String.valueOf("*");
-
-                for (int i = 0; i < 5; i++) {
-                    for (int j = 0; j < 5; j++) {
-                        System.out.print(playingBoard[i][j] + " ");
-                    }
-                    System.out.println();
-                }
-                System.out.println("Missed. Try again!");
-
         }
-        }*/
-
 
     }
 
 }
  /*char[][] board = {{'0', '1', '2', '3', '4', '5'}, {'1', '-', '*', '-', '-', '-'},
-                {'2', '-', '-', '-', '-', '-'}, {'3', '-', '*', '-', '-', '-'},
-                {'4', '-', '-', '*', '-', '-'}, {'5', '-', '*', '-', '-', '*'}};
-        System.out.println();
-        for (int i = 0; i < board.length; i++) {
-            for (int a = 0; a < board[i].length; a++) {
-                System.out.print(board[i][a] + " ");
+                    {'2', '-', '-', '-', '-', '-'}, {'3', '-', '*', '-', '-', '-'},
+                    {'4', '-', '-', '*', '-', '-'}, {'5', '-', '*', '-', '-', '*'}};
+  System.out.println();
+  for (int i = 0; i < board.length; i++) {
+  for (int j = 0; j < board[i].length; j++) {
+  System.out.print(board[i][j] + " ");
             }
             System.out.println(" ");
         }8*/
