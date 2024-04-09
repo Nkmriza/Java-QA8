@@ -43,7 +43,7 @@ public class HW6t2 {
         int line = scanner.nextInt();
         System.out.println("Choose the column for shooting (1-5):");
         int column = scanner.nextInt();
-            if (line < 1 || line >= 5 || column < 1 || column >= 5) {
+            if (line < 1 || line > 5 || column < 1 || column > 5) {
                 System.out.println("Invalid line or column, try again!");
             }
             int neededLine = random.nextInt();
