@@ -28,16 +28,60 @@ public class HW6t2 {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.println("All Set. Get ready to rumble!");
-        char[][] playingBoard = new char[5][5];
-        while (true) {
-            System.out.println("Choose the line for shooting (1-5):");
-            int line = scanner.nextInt() - 1;
-            System.out.println("Choose the column for shooting (1-5):");
-            int column = scanner.nextInt() - 1;
-
+        String[][] playingBoard = new String[5][5];
+        System.out.println("Playing field:");
+        for (int i = 0; i < playingBoard.length; i++) {
+            for (int j = 0; j < playingBoard.length; j++) {
+                char symbol = '-';
+                System.out.print(symbol + " ");
+            }
+            System.out.println();
         }
 
+        while (true){
+            System.out.println("Choose the line for shooting (1-5):");
+        int line = scanner.nextInt();
+        System.out.println("Choose the column for shooting (1-5):");
+        int column = scanner.nextInt();
+            if (line < 1 || line >= 5 || column < 1 || column >= 5) {
+                System.out.println("Invalid line or column, try again!");
+            }
+            int neededLine = random.nextInt();
+            int neededColumn = random.nextInt();
+
+
     }
+       /*
+
+            if (column == line1 && column == column2) {
+                playingBoard[line][column] = String.valueOf("x");
+
+
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        System.out.print(playingBoard[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+                System.out.println("You have won!");
+                break;
+            } else {
+                playingBoard[line][column] = String.valueOf("*");
+
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        System.out.print(playingBoard[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+                System.out.println("Missed. Try again!");
+
+        }
+        }*/
+
+
+    }
+
 }
 /*char[][] board = {{'0', '1', '2', '3', '4', '5'}, {'1', '-', '*', '-', '-', '-'},
                 {'2', '-', '-', '-', '-', '-'}, {'3', '-', '*', '-', '-', '-'},
