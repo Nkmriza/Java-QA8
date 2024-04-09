@@ -28,36 +28,66 @@ public class HW6t2 {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.println("All Set. Get ready to rumble!");
-        String[][] playingBoard = new String[5][5];
-        System.out.println("Playing field:");
+        char[][] playingBoard = new char[5][5];
         for (int i = 0; i < playingBoard.length; i++) {
             for (int j = 0; j < playingBoard.length; j++) {
-                char symbol = '-';
-                System.out.print(symbol + " ");
+                playingBoard[i][j] = '-';
             }
-            System.out.println();
         }
+        int neededLine = random.nextInt(4) + 1;
+        int neededColumn = random.nextInt(4) + 1;
 
         while (true) {
+
+            int line;
             System.out.println("Choose the line for shooting (1-5):");
-            int line = scanner.nextInt();
-            System.out.println("Choose the column for shooting (1-5):");
-            int column = scanner.nextInt();
-            if (line < 1 || line > 5 || column < 1 || column > 5) {
-                System.out.println("Invalid line or column, try again!");
+            line = scanner.nextInt();
+            while (line < 1 || line > 5) {
+                System.out.println("Invalid line. Choose the line for shooting (1-5):");
+                line = scanner.nextInt();
             }
-            int neededLine = random.nextInt();
-            int neededColumn = random.nextInt();
+            int column;
+            System.out.println("Choose the column for shooting (1-5):");
+            column = scanner.nextInt();
+            while (column < 1 || column > 5) {
+                System.out.println("Invalid column. Choose the column for shooting (1-5):");
+                column = scanner.nextInt();
+            }
+            /*System.out.println("line = " + line);
+            System.out.println("column = " + column);
+            System.out.println(neededLine);
+            System.out.println(neededColumn);*/
 
-
+            if (line == neededLine && column == neededColumn) {
+                System.out.println("You have won!");
+                playingBoard[line - 1][column - 1] = 'x';
+                System.out.println("Playing field:");
+                for (int i = 0; i < playingBoard.length; i++) {
+                    for (int j = 0; j < playingBoard.length; j++) {
+                        System.out.print(playingBoard[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+                break;
+            } else {
+                System.out.println("Try again.");
+                playingBoard[line - 1][column - 1] = '*';
+                System.out.println("Playing field:");
+                for (int i = 0; i < playingBoard.length; i++) {
+                    for (int j = 0; j < playingBoard.length; j++) {
+                        System.out.print(playingBoard[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
         }
 
     }
 
 }
- /*char[][] board = {{'0', '1', '2', '3', '4', '5'}, {'1', '-', '*', '-', '-', '-'},
-                    {'2', '-', '-', '-', '-', '-'}, {'3', '-', '*', '-', '-', '-'},
-                    {'4', '-', '-', '*', '-', '-'}, {'5', '-', '*', '-', '-', '*'}};
+ /*char[][] board = {{'0', '1', '2', '3', '4', '5'}, {'1', '-', '-', '-', '-', '-'},
+                    {'2', '-', '-', '-', '-', '-'}, {'3', '-', '-', '-', '-', '-'},
+                    {'4', '-', '-', '-', '-', '-'}, {'5', '-', '-', '-', '-', '-'}};
   System.out.println();
   for (int i = 0; i < board.length; i++) {
   for (int j = 0; j < board[i].length; j++) {
