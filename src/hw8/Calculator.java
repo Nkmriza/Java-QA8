@@ -48,15 +48,15 @@ division.
         Scanner sc = new Scanner(System.in);
         String action = sc.nextLine();
 
-        while (!action.equalsIgnoreCase("stop")){
+        while (!action.equalsIgnoreCase("stop")) {
             System.out.println("Введіть два числа: ");
             double number1 = sc.nextDouble();
             double number2 = sc.nextDouble();
             switch (action) {
-                case "+" -> summ(number1,number2);
-                case "-" -> minus(number1,number2);
-                case "*" -> multiply(number1,number2);
-                case "/" -> division(number1,number2);
+                case "+" -> summ(number1, number2);
+                case "-" -> minus(number1, number2);
+                case "*" -> multiply(number1, number2);
+                case "/" -> division(number1, number2);
                 default -> System.out.println("Недопустипа операція.");
             }
             System.out.println("Введіть Stop, щоб закрити калькулятор, або почніть спочатку: ");
@@ -73,5 +73,7 @@ division.
     }
 
 }
+
+
 /*public double double1;
     public double double2;*/
