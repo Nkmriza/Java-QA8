@@ -1,4 +1,6 @@
-package hw8;
+package hw8.treeTask2;
+
+import hw8.treeTask2.Tree;
 
 public class TreeMainTask2 {
     public static void main(String[] args) {

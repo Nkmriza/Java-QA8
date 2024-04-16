@@ -1,4 +1,4 @@
-package hw8;
+package hw8.treeTask2;
 
 public class Tree {
     /*) Створити клас Tree із перевантаженими конструкторами.

@@ -1,4 +1,6 @@
-package hw8;
+package hw8.computerTask1;
+
+import hw8.computerTask1.Computer;
 
 public class ComputerMainTask1 {
     public static void main(String[] args) {

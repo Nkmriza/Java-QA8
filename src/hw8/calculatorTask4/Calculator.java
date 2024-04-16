@@ -1,4 +1,4 @@
-package hw8;
+package hw8.calculatorTask4;
 
 import java.util.Scanner;
 
@@ -49,7 +49,7 @@ division.
         String action = sc.nextLine();
 
         while (!action.equalsIgnoreCase("stop")) {
-            System.out.println("Введіть два числа: ");
+            System.out.println("Введіть два числа для дії: ");
             double number1 = sc.nextDouble();
             double number2 = sc.nextDouble();
             switch (action) {
