@@ -1,6 +1,5 @@
 package hw9;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Human {
@@ -10,26 +9,27 @@ public class Human {
     private int year;
     private int iq;
     private String pet;
-    private String mother;
-    private String father;
+    private Human mother;
+    private Human father;
+    private Family family;
 
-    public void greetPet() {
-        Pet pet = new Pet();
-        System.out.println("Привіт" + pet.getNickname() + "!");
+
+    public void greetPet(Pet pet) {
+        System.out.println("Привіт, " + pet.getNickname() + "!");
     }
 
-    public void describePet() {
-        Pet pet = new Pet();
-        System.out.println("У мене є" + pet.getSpecies() + "їй" + pet.getAge() + " років, він" + pet.getTrickLevel());
+    public void describePet(Pet pet) {
+       /* if (pet.getTrickLevel() > 50){
+            System.out.println("дуже хитрий");}
+        else if (pet.getTrickLevel() <= 50) {
+            System.out.println("майже не хитрий");
+        }*/
+        String trickLevel = (pet.getTrickLevel() > 50) ? "дуже хитрий" : "майже не хитрий";
+        System.out.println("У мене є " + pet.getSpecies() + " їй " + pet.getAge() + " років, він " + trickLevel);
     }
 
-    public Human(String name, String surname, int year) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-    }
 
-    public Human(String name, String surname, int year, String mother, String father) {
+    public Human(String name, String surname, int year, Human mother, Human father) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -37,7 +37,7 @@ public class Human {
         this.father = father;
     }
 
-    public Human(String name, String surname, int year, int iq, String pet, String mother, String father) {
+    public Human(String name, String surname, int year, int iq, String pet, Human mother, Human father) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -48,7 +48,6 @@ public class Human {
     }
 
     public Human() {
-
     }
 
     public String getName() {
@@ -91,20 +90,28 @@ public class Human {
         this.pet = pet;
     }
 
-    public String getMother() {
+    public Human getMother() {
         return mother;
     }
 
-    public void setMother(String mother) {
+    public void setMother(Human mother) {
         this.mother = mother;
     }
 
-    public String getFather() {
+    public Human getFather() {
         return father;
     }
 
-    public void setFather(String father) {
+    public void setFather(Human father) {
         this.father = father;
+    }
+
+    public Family getFamily() {
+        return family;
+    }
+
+    public void setFamily(Family family) {
+        this.family = family;
     }
 
     @Override
@@ -122,18 +129,12 @@ public class Human {
 
     @Override
     public String toString() {
-        Pet pet1 = new Pet();
-        return "Human{" +
-                "name= " + name + '\'' +
-                ", surname= " + surname + '\'' +
-                ", year= " + year +
-                ", iq= " + iq +
-                ", mother= " + mother + '\'' +
-                ", father= " + father + '\'' +
-                ", pet= " + pet + "{" + "nickname='" + pet1.getNickname() + '\'' +
-                ", age=" + pet1.getAge() +
-                ", trickLevel=" + pet1.getTrickLevel() +
-                ", habits=" + Arrays.toString(pet1.getHabits()) +
-                '}';
+        return "ім'я = " + name +
+                ", прізвище = " + surname +
+                ", рік = " + year +
+                ", IQ = " + iq /*+ " mother " + mother +
+                ", father= " + father +
+                ", pet= "+ pet*/;
     }
+
 }

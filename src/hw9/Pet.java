@@ -4,49 +4,31 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Pet {
-    /*Опишіть у класі Pet такі поля:
-• вид тварини (species), рядок (собака, кіт тощо)
-• кличка (nickname)
-• вік (age)
-• Рівень хитрості (trickLevel) (ціле число від 0 до 100)
-• звички (habits) (масив рядків)
-
-
-Опишіть у класі Pet та реалізуйте такі методи:
-• поїсти (eat) (метод виводить на екран повідомлення Я ї'м!)
-• відгукнутися (respond) (метод виводить на екран повідомлення Привіт,
-хазяїн. Я - [ім'я тварини]. Я скучив!)
-• зробити домашню гидоту (foul) (метод виводить на екран повідомлення
-Потрібно добре замести сліди...)
-
-У класі Pet створіть конструктори:
-• конструктор, що описує вид тварини та її прізвисько
-• конструктор, що описує всі поля тварини
-• Порожній конструктор*/
 
     private String species;
     private String nickname;
-    private  int age;
+    private int age;
     private int trickLevel;
-    private String [] habits;
+    private String[] habits;
 
-    public void eat (){
+    public void eat() {
         System.out.println("Я їм!");
     }
 
-    public void respond () {
-        System.out.println("Привіт, хазяїн. Я - " + nickname +". Я скучив!");
+    public void respond() {
+        System.out.println("Привіт, хазяїн. Я - " + nickname + ". Я скучив!");
     }
 
-    public void foul (){
+    public void foul() {
         System.out.println("Потрібно добре замести сліди...");
     }
 
-    public Pet (String species, String nickname){
+    public Pet(String species, String nickname) {
         this.nickname = nickname;
         this.species = species;
     }
-    public Pet(String species, String nickname, int age, int trickLevel, String [] habits){
+
+    public Pet(String species, String nickname, int age, int trickLevel, String[] habits) {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
@@ -54,7 +36,8 @@ public class Pet {
         this.habits = habits;
     }
 
-    public Pet(){}
+    public Pet() {
+    }
 
     public String getSpecies() {
         return species;
@@ -113,12 +96,11 @@ public class Pet {
 
     @Override
     public String toString() {
-        return species + "{"+
-                ", nickname='" + nickname + '\'' +
-                ", age=" + age +
-                ", trickLevel=" + trickLevel +
-                ", habits=" + Arrays.toString(habits) +
-                '}';
+        return species +
+                ": кличка = " + nickname +
+                ", вік = " + age +
+                ", рівень хитрості = " + trickLevel +
+                ", звички = " + Arrays.toString(habits);
 
     }
 }
