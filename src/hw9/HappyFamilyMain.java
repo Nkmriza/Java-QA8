@@ -1,6 +1,6 @@
 package hw9;
 
-public class HappyFamily {
+public class HappyFamilyMain {
     public static void main(String[] args) {
         System.out.println("Cім'я Бойко:");
         Human mother = new Human("Ніка", "Бойко", 1992, 120, "Бобік", null, null);
