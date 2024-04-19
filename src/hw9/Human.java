@@ -28,6 +28,12 @@ public class Human {
         System.out.println("У мене є " + pet.getSpecies() + " їй " + pet.getAge() + " років, він " + trickLevel);
     }
 
+    public Human(String name, String surname, int year){
+
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+    }
 
     public Human(String name, String surname, int year, Human mother, Human father) {
         this.name = name;
