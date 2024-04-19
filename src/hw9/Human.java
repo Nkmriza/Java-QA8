@@ -9,13 +9,17 @@ public class Human {
     private int year;
     private int iq;
     private String pet;
-    private Human mother;
+   private Human mother;
     private Human father;
     private Family family;
 
 
     public void greetPet(Pet pet) {
         System.out.println("Привіт, " + pet.getNickname() + "!");
+    }
+
+    public void feedPet(Pet pet){
+        System.out.println("Мабуть, ти голодна...");
     }
 
     public void describePet(Pet pet) {
