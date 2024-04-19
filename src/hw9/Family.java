@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Family {
 
-   private Human mother;
+    private Human mother;
     private Human father;
     private Human[] children;
     private Pet pet;
 
-   /* public Human getMother() {
+    public Human getMother() {
         return mother;
     }
 
@@ -35,7 +35,7 @@ public class Family {
 
     public Pet getPet() {
         return pet;
-    }*/
+    }
 
     public void setPet(Pet pet) {
         this.pet = pet;
@@ -87,7 +87,6 @@ public class Family {
         this.mother = mother;
         this.father = father;
         this.children = new Human[0];
-        this.pet = new Pet();
         mother.setFamily(this);
         father.setFamily(this);
     }
@@ -96,8 +95,8 @@ public class Family {
     public String toString() {
         return /*"Сім'я: " + "\n" +*/
                 mother + "\n" + father + "\n" +
-                "діти: " + Arrays.toString(children) + "\n" +
-                pet;
+                        "діти: " + Arrays.toString(children) + "\n" +
+                        pet;
     }
 
    /* @Override

@@ -101,6 +101,5 @@ public class Pet {
                 ", вік = " + age +
                 ", рівень хитрості = " + trickLevel +
                 ", звички = " + Arrays.toString(habits);
-
     }
 }

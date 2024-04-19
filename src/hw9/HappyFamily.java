@@ -2,8 +2,6 @@ package hw9;
 
 public class HappyFamily {
     public static void main(String[] args) {
-           /*Human mother = new Human("Ніка");
-            Human father = new Human("Діма");*/
         System.out.println("Cім'я Бойко:");
         Human mother = new Human("Ніка", "Бойко", 1992, 120, "Бобік", null, null);
         Human father = new Human("Діма", "Бойко", 1985, 95, "Бобік", null, null);
@@ -22,13 +20,13 @@ public class HappyFamily {
         mother.greetPet(pet);
 
         System.out.println("\n" + "Cім'я Петренко:");
-        Human mother2 = new Human("Маріна","Петренко", 1988);
-        Human father2 = new Human("Олег","Петренко",1985);
-        Human child3 = new Human ("Іван", "Петренко",2023);
-        Human child4 = new Human (null, null,0);
-        String [] habits2 = {"царапається","муркотить"};
-        Pet pet2 = new Pet("кішка","Мурка", 5, 90, habits2);
-        Family family2 = new Family(mother2,father2);
+        Human mother2 = new Human("Маріна", "Петренко", 1988);
+        Human father2 = new Human("Олег", "Петренко", 1985);
+        Human child3 = new Human("Іван", "Петренко", 2023);
+        Human child4 = new Human(null, null, 0);
+        String[] habits2 = {"царапається", "муркотить"};
+        Pet pet2 = new Pet("кішка", "Мурка", 5, 90, habits2);
+        Family family2 = new Family(mother2, father2);
         family2.deleteChild(child4);
         family2.addChild(child3);
         family2.setPet(pet2);
@@ -39,13 +37,14 @@ public class HappyFamily {
         father2.describePet(pet2);
 
         System.out.println("Сім'я Васько:");
-        Human mother3 = new Human("Ліля","Васько", 1950, null,null);
-        Human father3 = new Human("Федір","Васько",1949, null,null);
+        Human mother3 = new Human("Ліля", "Васько", 1950, null, null);
+        Human father3 = new Human("Федір", "Васько", 1949, null, null);
         Pet pet3 = new Pet("кролик", "Вухастий");
-        Family family3 = new Family(mother3,father3);
+        Family family3 = new Family(mother3, father3);
         family3.setPet(pet3);
-        pet3.eat();
         System.out.println(family3);
+        System.out.println();
+        pet3.eat();
 
     }
 

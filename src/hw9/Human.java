@@ -9,7 +9,7 @@ public class Human {
     private int year;
     private int iq;
     private String pet;
-   private Human mother;
+    private Human mother;
     private Human father;
     private Family family;
 
@@ -18,7 +18,7 @@ public class Human {
         System.out.println("Привіт, " + pet.getNickname() + "!");
     }
 
-    public void feedPet(Pet pet){
+    public void feedPet(Pet pet) {
         System.out.println("Мабуть, ти голодна...");
     }
 
@@ -32,7 +32,7 @@ public class Human {
         System.out.println("У мене є " + pet.getSpecies() + " їй " + pet.getAge() + " років, він " + trickLevel);
     }
 
-    public Human(String name, String surname, int year){
+    public Human(String name, String surname, int year) {
 
         this.name = name;
         this.surname = surname;
@@ -45,6 +45,7 @@ public class Human {
         this.year = year;
         this.mother = mother;
         this.father = father;
+        this.pet = pet;
     }
 
     public Human(String name, String surname, int year, int iq, String pet, Human mother, Human father) {
@@ -141,10 +142,8 @@ public class Human {
     public String toString() {
         return "ім'я = " + name +
                 ", прізвище = " + surname +
-                ", рік = " + year +
-                ", IQ = " + iq /*+ " mother " + mother +
-                ", father= " + father +
-                ", pet= "+ pet*/;
+                ", рік = " + year + ", IQ = " + iq /* + " мама = " + mother +
+                ", тато = " + father +
+                ", домашній улюбленець = " + pet*/;
     }
-
 }
