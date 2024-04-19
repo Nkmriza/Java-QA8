@@ -2,8 +2,8 @@ package hw9;
 
 public class HappyFamily {
     public static void main(String[] args) {
-           /*Human mother = new Human("Nika");
-            Human father = new Human("John");*/
+           /*Human mother = new Human("Ніка");
+            Human father = new Human("Діма");*/
         Human mother = new Human("Ніка", "Бойко", 1992, 120, "Бобік", null, null);
         Human father = new Human("Діма", "Бойко", 1985, 95, "Бобік", null, null);
         Human child = new Human("Марина", "Бойко", 2020, mother, father);
