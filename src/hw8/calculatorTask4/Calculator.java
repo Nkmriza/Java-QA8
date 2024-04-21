@@ -56,7 +56,13 @@ division.
                 case "+" -> summ(number1, number2);
                 case "-" -> minus(number1, number2);
                 case "*" -> multiply(number1, number2);
-                case "/" -> division(number1, number2);
+                case "/" -> {
+                    if (number2 != 0) {
+                        division(number1, number2);
+                    } else {
+                        System.out.println("Ділення на нуль неможливе!");
+                    }
+                }
                 default -> System.out.println("Недопустипа операція.");
             }
             System.out.println("Введіть Stop, щоб закрити калькулятор, або почніть спочатку: ");
