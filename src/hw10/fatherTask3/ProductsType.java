@@ -1,11 +1,11 @@
 package hw10.fatherTask3;
 
 public enum ProductsType {
-    APPLE("apple", 24.5),
-    POTATOES("potatoes", 30),
-    MILK("milk", 45.5),
-    BEER("beer", 40),
-    CIGARETTES("cigarettes", 95.5);
+    APPLE("яблуко", 24.5),
+    POTATOES("картопля", 30),
+    MILK("молоко", 45.5),
+    BEER("пиво", 40),
+    CIGARETTES("тютюн", 95.5);
 
     private String productName;
     private double price;

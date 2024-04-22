@@ -32,17 +32,22 @@ public class Father {
     }
 
     public void buyingProducts(ProductsType type1, int amount1, ProductsType type2, int amount2) {
-        double totalCost = type1.getPrice()*amount1 + type2.getPrice()*amount2;
+        double totalCost = type1.getPrice() * amount1 + type2.getPrice() * amount2;
         if (totalCost > amountOfMoneyInPocket) {
             System.out.println("У вас не вистачає грошей");
-        } else if (type1 == ProductsType.BEER || type2 == ProductsType.BEER ||
+            return;
+        }
+        if (type1 == ProductsType.BEER || type2 == ProductsType.BEER ||
                 type1 == ProductsType.CIGARETTES || type2 == ProductsType.CIGARETTES) {
             System.out.println("Цього не варто це купувати!");
-
-        } else if (totalCost % 3 != 0) {
-            System.out.println();
+            return;
         }
-          System.out.println("Шановний " + fatherName + ", вартість вашої покупки " + totalCost +
-                ". Ви придбали: " + type1.getProductName() + " та " + type2.getProductName());
+        if (amount1 % 3 == 0 || amount2 % 3 == 0) {
+            System.out.println("Візьміть більше або менше 3х одиниць певного товару по кількості");
+            return;
+        }
+        System.out.println("Шановний " + fatherName  +
+                ", ви придбали: " + type1.getProductName()+ " у кількості " + amount1 + " шт. " + "та " + type2.getProductName()+
+                " у кількості " + amount2 + " шт., вартість вашої покупки " + totalCost +" грн.");
     }
 }
