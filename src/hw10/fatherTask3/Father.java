@@ -39,11 +39,11 @@ public class Father {
         }
         if (type1 == ProductsType.BEER || type2 == ProductsType.BEER ||
                 type1 == ProductsType.CIGARETTES || type2 == ProductsType.CIGARETTES) {
-            System.out.println("Цього не варто це купувати!");
+            System.out.println("Цього не варто купувати!");
             return;
         }
-        if (amount1 % 3 == 0 || amount2 % 3 == 0) {
-            System.out.println("Візьміть більше або менше 3х одиниць певного товару по кількості");
+        if (amount1 % 3 != 0 || amount2 % 3 != 0) {
+            System.out.println("Візьми стільки, щоб вистачило тобі, дружині та дитині.");
             return;
         }
         System.out.println("Шановний " + fatherName  +
