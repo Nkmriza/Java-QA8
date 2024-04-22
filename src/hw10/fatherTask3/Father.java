@@ -31,17 +31,18 @@ public class Father {
         this.amountOfMoneyInPocket = amountOfMoneyInPocket;
     }
 
-    public void buyingProducts(ProductsType type1, ProductsType type2) {
-        double totalCost = type1.getPrice() + type2.getPrice();
+    public void buyingProducts(ProductsType type1, int amount1, ProductsType type2, int amount2) {
+        double totalCost = type1.getPrice()*amount1 + type2.getPrice()*amount2;
         if (totalCost > amountOfMoneyInPocket) {
             System.out.println("У вас не вистачає грошей");
-        }  if (type1 == ProductsType.BEER || type2 == ProductsType.BEER ||
+        } else if (type1 == ProductsType.BEER || type2 == ProductsType.BEER ||
                 type1 == ProductsType.CIGARETTES || type2 == ProductsType.CIGARETTES) {
             System.out.println("Цього не варто це купувати!");
-        }  if (totalCost % 3 != 0) {
+
+        } else if (totalCost % 3 != 0) {
             System.out.println();
         }
-        System.out.println("Шановний " + fatherName + ", вартість вашої покупки " + totalCost +
+          System.out.println("Шановний " + fatherName + ", вартість вашої покупки " + totalCost +
                 ". Ви придбали: " + type1.getProductName() + " та " + type2.getProductName());
     }
 }
