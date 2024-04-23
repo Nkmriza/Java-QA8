@@ -33,6 +33,7 @@ public class Array {
         }
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть індекс від 0 до 30");
+
         int index = scanner.nextInt();
     }
 }
