@@ -18,7 +18,7 @@ public class ShopMain {
 
 */
     public static void main(String[] args) {
-       Shop shop = new Shop("Малінка", 120, "Сергій", 17, true,"Ольга", false, "Пиво", true);
-       shop.returnCost("Малінка", 120, "Сергій", 17, false,"Ольга", true, "пиво", false);
+       Shop shop = new Shop("Малінка", 120, "Сергій", 17, true,"Ольга", true, "Cік", false);
+       shop.returnCost();
     }
 }

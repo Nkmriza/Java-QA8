@@ -75,11 +75,8 @@ public class Shop implements BuyingProducts {
         this.productName = productName;
     }
 
-
     @Override
-    public void returnCost(String shopName, int priceOfPurchase,
-                           String customerName, int customerAge, boolean discountCard,
-                           String sellerName, boolean honestSeller, String productName, boolean consistsAlcohol) {
+    public void returnCost() {
         double discount = 0.1;
         if (consistsAlcohol) {
             if (!honestSeller) {
@@ -95,12 +92,11 @@ public class Shop implements BuyingProducts {
                 }
                 return;
             }
-
             if (honestSeller) {
                 System.out.println("Продавець відмовився продати товар");
             }
         } else {
-            System.out.println("Шановний(шановна) " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продала вам товар " + productName + ". Товар не містить алкоголь. ");
+            System.out.println("Шановний(шановна) " + customerName + ", продавець " + sellerName +  ", нашого магазину " + "'" + shopName + "'" +  ", продала вам товар " + productName + ". Товар не містить алкоголь. ");
             if (discountCard) {
                 System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount) + ". Вдала покупка!");
             } else {
@@ -108,12 +104,6 @@ public class Shop implements BuyingProducts {
             }
         }
 
-
     }
-
-    /*Шановний {Ім'я покупця}, продавець {Ім'я продавця} нашого магазину
-     "{Назва магазину}", продасть вам цей товар {Назва товару}, у них є алкогольна
-     продукція, а ваш вік {Вік покупця}. Вартість вашої покупки дорівнює
-     {Вартість покупки} Ось вам знижка*/
 
 }
