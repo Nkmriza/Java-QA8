@@ -82,32 +82,31 @@ public class Shop implements BuyingProducts {
                            String sellerName, boolean honestSeller, String productName, boolean consistsAlcohol) {
         double discount = 0.1;
         if (consistsAlcohol) {
-            if (honestSeller) {
-                System.out.println("Нечесний продавець продасть покупцю" + customerName + " алкогольний товар.");
-                System.out.println("Шановний/шановна " + customerName + ", продавець нашого магазину " + sellerName + " порушила правила магазину та продала вам " + productName + ", який містить алкоголь.");
+            if (!honestSeller) {
+                System.out.println("Нечесний продавець " + sellerName + " продав покупцю " + customerName + " алкогольний товар.");
+                if (customerAge < 18 && !honestSeller) {
+                    System.out.println("Шановний(шановна)  " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продав вам алкогольний товар. Оскільки вам " + customerAge + " років, просимо повернути " + productName);
+                    return;
+                }
                 if (discountCard) {
-                    System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
+                    System.out.println("Шановний(шановна)  " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продав вам алкогольний товар " + productName + ". Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
                 } else {
-                    System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
+                    System.out.println("Шановний(шановна)  " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продав вам алкогольний товар " + productName + ". У вас немає знижки, сума до слпати:" + priceOfPurchase);
                 }
                 return;
-            } if (customerAge < 18) {
-                System.out.println("Шановний/шановна" + customerName + ", продавець нашого магазину" + shopName + " - " + sellerName +" продав вам алкогольний товар. Оскільки вам " + customerAge + " років, просимо повернути" + productName);
-                return;
-            } if (!honestSeller) {
+            }
+
+            if (honestSeller) {
                 System.out.println("Продавець відмовився продати товар");
-                return;
             }
         } else {
-            System.out.println("Шановний/шановна " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продала вам товар " + productName + "." );
-            System.out.println("Товар не містить алкоголь. Вдала покупка!");
+            System.out.println("Шановний(шановна) " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продала вам товар " + productName + ". Товар не містить алкоголь. ");
             if (discountCard) {
-                System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
+                System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount) + ". Вдала покупка!");
             } else {
                 System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
             }
         }
-
 
 
     }
