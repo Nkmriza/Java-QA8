@@ -1,6 +1,6 @@
 package hw10.shopTask1;
 
-public class Shop {
+public class Shop implements BuyingProducts {
     private String shopName;
     private int priceOfPurchase;
     private String customerName;
@@ -8,13 +8,22 @@ public class Shop {
     private String sellerName;
     private String productName;
 
-    public Shop(String shopName, int priceOfPurchase, String customerName, int customerAge, String sellerName, String productName) {
+    private boolean honestSeller;
+    private boolean consistsAlcohol;
+    private boolean discountCard;
+
+    public Shop(String shopName, int priceOfPurchase,
+                String customerName, int customerAge, boolean discountCard,
+                String sellerName, boolean honestSeller, String productName, boolean consistsAlcohol) {
         this.shopName = shopName;
         this.priceOfPurchase = priceOfPurchase;
         this.customerName = customerName;
         this.customerAge = customerAge;
         this.sellerName = sellerName;
         this.productName = productName;
+        this.honestSeller = honestSeller;
+        this.discountCard = discountCard;
+        this.consistsAlcohol = consistsAlcohol;
 
     }
 
@@ -66,45 +75,34 @@ public class Shop {
         this.productName = productName;
     }
 
+
+    @Override
     public void returnCost(String shopName, int priceOfPurchase,
-                                        String customerName, int customerAge,
-                                        String sellerName, String productName) {
-        /*String alcohol = "алкогольний напій";
-        String nonAlcohol = "безалкогольний напій";
-        if (productName.equalsIgnoreCase(alcohol)) {
-            System.out.println("Товар алкогольний");
-        }
-        if (productName.equalsIgnoreCase(nonAlcohol)) {
-            System.out.println("Товар безалкогольний");
-        }*/
-
-      boolean consistsAlcohol = false;
-      boolean honestSeller = false;
+                           String customerName, int customerAge, boolean discountCard,
+                           String sellerName, boolean honestSeller, String productName, boolean consistsAlcohol) {
         if (consistsAlcohol) {
-            if (sellerName.equals("чесний")) {
-                System.out.println( "Продавець не продасть покупцю" + customerName + " алкогольний товар." );
-            } else if (customerAge < 18 && consistsAlcohol == true){
+            if (honestSeller) {
+                System.out.println("Нечесний продавець продасть покупцю" + customerName + " алкогольний товар.");
+            } else if (customerAge < 18) {
                 System.out.println("Продавець порушує правила продажу.");
-            }
-            else {
-                System.out.println("Товар не містить алкоголь. Вдала покупка!");
-            }
-        }
-
-       /* if (sellerName.equalsIgnoreCase("чесний")) {
-            if (productName.equalsIgnoreCase(alcohol)) {
-                System.out.println("Продавець чесний і відмовився продавати алкоголь.");
-            } else if (productName == nonAlcohol) {
-                System.out.println(nonAlcohol);
+            } else {
+                System.out.println("Продавець відмовився продати товар");
             }
         } else {
-            if (productName.equalsIgnoreCase(alcohol)) {
-                System.out.println("Продавець нечесний і продасть вам алкогольний товар.");
-            } else if (productName.equalsIgnoreCase(nonAlcohol)) {
-                System.out.println("Товар безалкогольний.");
-            }
-        }*/
+            System.out.println("Товар не містить алкоголь. Вдала покупка!");
+        }
         double discount = 0.1;
+
+        if (discountCard) {
+            System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
+        } else {
+            System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
+        }
     }
+
+    /*Шановний {Ім'я покупця}, продавець {Ім'я продавця} нашого магазину
+     "{Назва магазину}", продасть вам цей товар {Назва товару}, у них є алкогольна
+     продукція, а ваш вік {Вік покупця}. Вартість вашої покупки дорівнює
+     {Вартість покупки} Ось вам знижка*/
 
 }
