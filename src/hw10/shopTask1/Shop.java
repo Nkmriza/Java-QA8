@@ -80,24 +80,36 @@ public class Shop implements BuyingProducts {
     public void returnCost(String shopName, int priceOfPurchase,
                            String customerName, int customerAge, boolean discountCard,
                            String sellerName, boolean honestSeller, String productName, boolean consistsAlcohol) {
+        double discount = 0.1;
         if (consistsAlcohol) {
             if (honestSeller) {
                 System.out.println("Нечесний продавець продасть покупцю" + customerName + " алкогольний товар.");
-            } else if (customerAge < 18) {
-                System.out.println("Продавець порушує правила продажу.");
-            } else {
+                System.out.println("Шановний/шановна " + customerName + ", продавець нашого магазину " + sellerName + " порушила правила магазину та продала вам " + productName + ", який містить алкоголь.");
+                if (discountCard) {
+                    System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
+                } else {
+                    System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
+                }
+                return;
+            } if (customerAge < 18) {
+                System.out.println("Шановний/шановна" + customerName + ", продавець нашого магазину" + shopName + " - " + sellerName +" продав вам алкогольний товар. Оскільки вам " + customerAge + " років, просимо повернути" + productName);
+                return;
+            } if (!honestSeller) {
                 System.out.println("Продавець відмовився продати товар");
+                return;
             }
         } else {
+            System.out.println("Шановний/шановна " + customerName + ", продавець нашого магазину " + shopName + " - " + sellerName + " продала вам товар " + productName + "." );
             System.out.println("Товар не містить алкоголь. Вдала покупка!");
+            if (discountCard) {
+                System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
+            } else {
+                System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
+            }
         }
-        double discount = 0.1;
 
-        if (discountCard) {
-            System.out.println("Знижка на ваш товар: 10%, сума до сплати " + priceOfPurchase * (1 - discount));
-        } else {
-            System.out.println("У вас немає знижки, сума до слпати:" + priceOfPurchase);
-        }
+
+
     }
 
     /*Шановний {Ім'я покупця}, продавець {Ім'я продавця} нашого магазину
